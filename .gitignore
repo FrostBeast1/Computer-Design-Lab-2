@@ -44,6 +44,7 @@
 *.qar
 *.qarlog
 *.qws
+*.pdf
 *.rpt
 *.smsg
 *.sof
@@ -59,7 +60,7 @@
 # ignore Quartus II generated folders
 */db/
 */incremental_db/
-*/simulation/
+/simulation/
 */timing/
 */testbench/
 */*_sim/

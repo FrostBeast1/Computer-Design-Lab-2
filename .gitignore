@@ -44,7 +44,6 @@
 *.qar
 *.qarlog
 *.qws
-*.pdf
 *.rpt
 *.smsg
 *.sof
@@ -58,8 +57,8 @@
 # *.sdc # I want those timing files
 
 # ignore Quartus II generated folders
-*/db/
-*/incremental_db/
+/db/
+/incremental_db/
 /simulation/
 */timing/
 */testbench/

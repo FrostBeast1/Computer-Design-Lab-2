@@ -44,13 +44,17 @@
 *.qar
 *.qarlog
 *.qws
+*.qpf~
+*.qsf~
+*.sdc~
+*.bak
+*.tmp
 *.rpt
 *.smsg
 *.sof
 *.sopc_builder
 *.summary
-*.tcl
-*.txt # Explicitly add any text files used
+#*.txt # Explicitly add any text files used
 *~
 *example*
 *sopc_*
@@ -59,11 +63,11 @@
 # ignore Quartus II generated folders
 /db/
 /incremental_db/
-/simulation/
+simulation/*
+!simulation/*.v
+!simulation/*.vwf
 */timing/
 */testbench/
 */*_sim/
-incremental_db/
-db/
-_output_files/
+/output_files/
 PLLJ_PLLSPE_INFO.txt

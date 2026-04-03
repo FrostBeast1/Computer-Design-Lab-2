@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect 120 160 288 176)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "In1[7..0]" (rect 5 0 47 12)(font "Arial" ))
+	(text "In1[7..0]" (rect 5 0 46 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -34,12 +34,13 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 56 48 120 160))
 )
 (pin
 	(input)
 	(rect 120 176 288 192)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "In2[7..0]" (rect 5 0 47 12)(font "Arial" ))
+	(text "In2[7..0]" (rect 5 0 46 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -50,10 +51,11 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 56 192 120 304))
 )
 (pin
 	(output)
-	(rect 480 160 656 176)
+	(rect 472 160 648 176)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "Product[15..0]" (rect 90 0 159 12)(font "Arial" ))
 	(pt 0 8)
@@ -89,7 +91,7 @@ applicable agreement for further details.
 		(pt 184 32)
 		(output)
 		(text "Product[15..0]" (rect 0 0 69 12)(font "Arial" ))
-		(text "Product[15..0]" (rect 105 27 163 39)(font "Arial" ))
+		(text "Product[15..0]" (rect 105 27 174 39)(font "Arial" ))
 		(line (pt 184 32)(pt 168 32)(line_width 3))
 	)
 	(parameter
@@ -106,9 +108,4 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 168 64))
 	)
 	(annotation_block (parameter)(rect 472 88 688 136))
-)
-(connector
-	(pt 472 168)
-	(pt 480 168)
-	(bus)
 )

@@ -66,6 +66,7 @@
 simulation/*
 !simulation/*.v
 !simulation/*.vwf
+!simulation/*.bdf
 */timing/
 */testbench/
 */*_sim/

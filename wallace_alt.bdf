@@ -34,7 +34,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 24 -24 88 88))
+	(annotation_block (location)(rect 88 -32 152 80))
 )
 (pin
 	(input)
@@ -51,7 +51,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 24 120 88 232))
+	(annotation_block (location)(rect 88 128 152 240))
 )
 (pin
 	(output)

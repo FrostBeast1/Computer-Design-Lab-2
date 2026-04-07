@@ -1,5 +1,4 @@
-module carry_save_adder(PP1, PP2, PP3, Save, Carry);
-	parameter BUS_WIDTH = 16;
+module carry_save_adder #(parameter BUS_WIDTH = 16) (PP1, PP2, PP3, Save, Carry);
 	input [BUS_WIDTH - 1 : 0] PP1, PP2, PP3;
 	output [BUS_WIDTH : 0] Carry, Save;
 	

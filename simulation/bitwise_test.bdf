@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 56 192 224 208)
+	(rect 104 192 272 208)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "A" (rect 5 0 13 12)(font "Arial" ))
 	(pt 168 8)
@@ -34,11 +34,11 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -8 208 56 224))
+	(annotation_block (location)(rect 40 176 104 192))
 )
 (pin
 	(input)
-	(rect 56 208 224 224)
+	(rect 104 208 272 224)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "B" (rect 5 0 12 12)(font "Arial" ))
 	(pt 168 8)
@@ -51,11 +51,11 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -8 224 56 240))
+	(annotation_block (location)(rect 40 224 104 240))
 )
 (pin
 	(output)
-	(rect 440 192 616 208)
+	(rect 392 192 568 208)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "C" (rect 90 0 98 12)(font "Arial" ))
 	(pt 0 8)
@@ -68,7 +68,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 616 208 672 224))
+	(annotation_block (location)(rect 568 208 624 224))
 )
 (symbol
 	(rect 272 168 392 248)
@@ -98,16 +98,4 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 104 64))
 	)
-)
-(connector
-	(pt 272 200)
-	(pt 224 200)
-)
-(connector
-	(pt 224 216)
-	(pt 272 216)
-)
-(connector
-	(pt 392 200)
-	(pt 440 200)
 )

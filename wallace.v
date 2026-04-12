@@ -6,15 +6,13 @@ module wallace(In1, In2, Product);
     output wire [PRODUCT_WIDTH - 1:0] Product;
 
     // -------------------------------------------------------
-    // Partial products - all 8 bits wide (unshifted)
+    // Partial products - all 16 bits wide (shifted)
     // -------------------------------------------------------
     wire [PRODUCT_WIDTH - 1:0] pp0, pp1, pp2, pp3, pp4, pp5, pp6, pp7;
 
     partial_product pp_gen(
-        .A
-		  (In1), .B(In2),
-        .PP0(pp0), .PP1(pp1), .PP2(pp2), .PP3(pp3),
-        .PP4(pp4), .PP5(pp5), .PP6(pp6), .PP7(pp7)
+        .A(In1), .B(In2), .PP0(pp0), .PP1(pp1), .PP2(pp2), 
+		  .PP3(pp3), .PP4(pp4), .PP5(pp5), .PP6(pp6), .PP7(pp7)
     );
 
     // -------------------------------------------------------
@@ -23,12 +21,10 @@ module wallace(In1, In2, Product);
     wire [PRODUCT_WIDTH:0] l1_s0, l1_c0, l1_s1, l1_c1;
 
     carry_save_adder #(.BUS_WIDTH(PRODUCT_WIDTH)) csa_l1_0(
-        .PP1(pp0), .PP2(pp1), .PP3(pp2),
-        .Save(l1_s0), .Carry(l1_c0)
+        .PP1(pp0), .PP2(pp1), .PP3(pp2), .Save(l1_s0), .Carry(l1_c0)
     );
     carry_save_adder #(.BUS_WIDTH(PRODUCT_WIDTH)) csa_l1_1(
-        .PP1(pp3), .PP2(pp4), .PP3(pp5),
-        .Save(l1_s1), .Carry(l1_c1)
+        .PP1(pp3), .PP2(pp4), .PP3(pp5), .Save(l1_s1), .Carry(l1_c1)
     );
 
     // -------------------------------------------------------
@@ -41,7 +37,7 @@ module wallace(In1, In2, Product);
 		  .PP3(l1_s1[PRODUCT_WIDTH - 1:0]), .Save(l2_s0), .Carry(l2_c0)
     );
     carry_save_adder #(.BUS_WIDTH(PRODUCT_WIDTH)) csa_l2_1(
-        .PP1(l1_c1[PRODUCT_WIDTH - 1:0]), .PP2(pp6),         .PP3(pp7),
+        .PP1(l1_c1[PRODUCT_WIDTH - 1:0]), .PP2(pp6), .PP3(pp7),
         .Save(l2_s1), .Carry(l2_c1)
     );
 
@@ -71,10 +67,8 @@ module wallace(In1, In2, Product);
     wire cout_unused;
 
     parallel_adder #(.BUS_WIDTH(PRODUCT_WIDTH)) finalAdder(
-        .Save(l4_s0[PRODUCT_WIDTH - 1:0]),
-        .Carry(l4_c0[PRODUCT_WIDTH - 1:0]),
-        .Out(Product),
-        .Cout(cout_unused)
+        .Save(l4_s0[PRODUCT_WIDTH - 1:0]), .Carry(l4_c0[PRODUCT_WIDTH - 1:0]),
+        .Out(Product), .Cout(cout_unused)
     );
 
 endmodule
